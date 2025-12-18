@@ -44,3 +44,38 @@ The pipeline consists of three main stages:
 Install the required Python packages:
 ```bash
 pip install -r requirements.txt
+
+Note: You must have the Stockfish engine installed and accessible in your system path for data generation.
+
+2. Prepare Data
+Run the processing script to generate NumPy arrays (X.npy, y.npy) from the PGN file:
+
+Bash
+
+python dataset.py
+(By default, this processes the 10-game sample)
+
+3. Train Model
+Train the neural network:
+
+Bash
+
+python train.py
+The trained model weights will be saved to model.pt.
+
+4. Evaluate
+Check the model's performance (ROC-AUC) on the processed data:
+
+Bash
+
+python evaluate.py
+Project Structure
+dataset.py: Handles PGN parsing, Stockfish interaction, and board tensor encoding.
+
+model.py: PyTorch CNN architecture definition.
+
+train.py: Training loop and optimization.
+
+evaluate.py: Model inference and metric calculation.
+
+data/: Directory for raw PGNs and processed .npy tensors.
