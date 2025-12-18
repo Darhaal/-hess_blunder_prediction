@@ -67,7 +67,7 @@ Check the model's performance (ROC-AUC) on the processed data:
 
 python evaluate.py
 ```
-Project Structure
+Project Structure```bash
 dataset.py: Handles PGN parsing, Stockfish interaction, and board tensor encoding.
 
 model.py: PyTorch CNN architecture definition.
@@ -78,4 +78,5 @@ evaluate.py: Model inference and metric calculation.
 
 data/: Directory for raw PGNs and processed .npy tensors.
 
+```
 
