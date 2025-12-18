@@ -53,12 +53,14 @@ Run the processing script to generate NumPy arrays (X.npy, y.npy) from the PGN f
 python dataset.py
 ```
 (By default, this processes the 10-game sample)
+
 3. Train Model
 Train the neural network:
 ```bash
 python train.py
 ```
 The trained model weights will be saved to model.pt.
+
 4. Evaluate
 Check the model's performance (ROC-AUC) on the processed data:
 ```bash
@@ -75,6 +77,7 @@ train.py: Training loop and optimization.
 evaluate.py: Model inference and metric calculation.
 
 data/: Directory for raw PGNs and processed .npy tensors.
+
 
 
 
