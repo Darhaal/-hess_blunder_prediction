@@ -49,26 +49,24 @@ Note: You must have the Stockfish engine installed and accessible in your system
 
 2. Prepare Data
 Run the processing script to generate NumPy arrays (X.npy, y.npy) from the PGN file:
-
-Bash
+```bash
 
 python dataset.py
 (By default, this processes the 10-game sample)
-
+```
 3. Train Model
 Train the neural network:
-
-Bash
+```bash
 
 python train.py
 The trained model weights will be saved to model.pt.
-
+```
 4. Evaluate
 Check the model's performance (ROC-AUC) on the processed data:
-
-Bash
+```bash
 
 python evaluate.py
+```
 Project Structure
 dataset.py: Handles PGN parsing, Stockfish interaction, and board tensor encoding.
 
@@ -79,4 +77,5 @@ train.py: Training loop and optimization.
 evaluate.py: Model inference and metric calculation.
 
 data/: Directory for raw PGNs and processed .npy tensors.
+
 
