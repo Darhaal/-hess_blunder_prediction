@@ -44,7 +44,7 @@ The pipeline consists of three main stages:
 Install the required Python packages:
 ```bash
 pip install -r requirements.txt
-
+```
 Note: You must have the Stockfish engine installed and accessible in your system path for data generation.
 
 2. Prepare Data
@@ -79,3 +79,4 @@ train.py: Training loop and optimization.
 evaluate.py: Model inference and metric calculation.
 
 data/: Directory for raw PGNs and processed .npy tensors.
+
